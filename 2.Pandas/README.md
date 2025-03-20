@@ -9,11 +9,17 @@
 📊 We highly recommend exploring the following statistical parameters:
 
 📈 Mean
+
 📊 Median
+
 📉 Mode
+
 📏 Standard Deviation
+
 🔄 Variation
+
 📏 Range of values
+
 ✅ Find which columns have the highest absolute correlation 📊 with the target column 🎯 (specified in the Data Set page).
 
 💡 Explain why this correlation happens 🤔 (you can explore literature on the topic 📚).
