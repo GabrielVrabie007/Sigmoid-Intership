@@ -68,6 +68,10 @@ class LinearRegressionModel:
         if np.isnan(X).any() or np.isinf(X).any():
             raise ValueError("Input X contains NaN or Inf values.")
 
+        if self.theta is None:
+            raise ValueError(
+                "Model parameters (theta) are not initialized. Please call the 'fit' method before 'predict'."
+            )
         predictions = X @ self.theta
 
         # Check for NaN or Inf in predictions
