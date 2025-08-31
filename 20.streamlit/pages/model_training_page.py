@@ -26,7 +26,7 @@ def show_manual_hyperparameter_ui(model_name):
     params = {}
     st.sidebar.markdown("---")
     st.sidebar.header("Manual Hyperparameters")
-    st.sidebar.info("💡 Tip: Start with default values and adjust incrementally")
+    st.sidebar.info(" Tip: Start with default values and adjust incrementally")
 
     if model_name == "Random Forest":
         params["n_estimators"] = st.sidebar.slider("Number of Estimators", 10, 500, 100, 10)
@@ -127,7 +127,7 @@ def display_training_results(results):
 
     with col2:
         st.metric(
-            label="📊 CV Score",
+            label="CV Score",
             value=f"{results.get('cv_mean_accuracy', 0):.2%}",
             delta=f"±{results.get('cv_std_accuracy', 0):.3f}"
         )
@@ -140,12 +140,12 @@ def display_training_results(results):
 
     with col4:
         st.metric(
-            label="📝 Features",
+            label=" Features",
             value=f"{results.get('feature_count', 0)}"
         )
 
     if results.get('best_params'):
-        st.markdown("#### 🔧 Best Hyperparameters Found:")
+        st.markdown("####  Best Hyperparameters Found:")
         clean_params = {k.replace('classifier__', ''): v for k, v in results['best_params'].items()}
         st.json(clean_params)
 
@@ -190,7 +190,7 @@ def show_feature_importance(model, feature_names):
 
         elif hasattr(classifier, 'coef_'):
             st.markdown("---")
-            st.markdown("#### 📈 Feature Coefficients")
+            st.markdown("#### Feature Coefficients")
 
             coef = classifier.coef_[0] if len(classifier.coef_.shape) > 1 else classifier.coef_
             coef_df = pd.DataFrame({
@@ -238,7 +238,7 @@ def show_model_training_page():
     X = df.drop(columns=['Customer_Segment'])
     y = df['Customer_Segment']
 
-    with st.expander("📊 Dataset Overview", expanded=False):
+    with st.expander(" Dataset Overview", expanded=False):
         col1, col2, col3 = st.columns(3)
         with col1:
             st.metric("Total Samples", len(df))
@@ -253,7 +253,7 @@ def show_model_training_page():
 
         missing_info = X.isnull().sum()
         if missing_info.sum() > 0:
-            st.warning(f"⚠️ Found {missing_info.sum()} missing values across {(missing_info > 0).sum()} features")
+            st.warning(f" Found {missing_info.sum()} missing values across {(missing_info > 0).sum()} features")
             st.write("Missing values will be handled automatically by the preprocessing pipeline.")
 
     try:
@@ -283,7 +283,7 @@ def show_model_training_page():
     )
 
     st.sidebar.markdown("---")
-    st.sidebar.header("🚀 Training Options")
+    st.sidebar.header(" Training Options")
 
     if tuning_method == 'Automatic (Grid Search)':
         quick_mode = st.sidebar.checkbox(
@@ -304,7 +304,7 @@ def show_model_training_page():
     st.subheader(f"🚀 Training: {model_name}")
 
     train_button_text = {
-        'Automatic (Grid Search)': f"🔍 Train with Grid Search",
+        'Automatic (Grid Search)': f" Train with Grid Search",
         'Manual (Custom Parameters)': f"⚙️ Train with Custom Parameters",
         'Quick Train (Default Params)': f"⚡ Quick Train"
     }[tuning_method]
@@ -359,7 +359,7 @@ def show_model_training_page():
             if y_pred is not None:
 
                 st.markdown("---")
-                st.subheader("📊 Model Performance Visualization")
+                st.subheader(" Model Performance Visualization")
 
                 col1, col2 = st.columns(2)
                 with col1:
@@ -375,12 +375,12 @@ def show_model_training_page():
                 st.markdown("---")
                 st.subheader("🔍 Model Insights")
 
-                with st.expander("📋 Detailed Classification Report", expanded=False):
+                with st.expander(" Detailed Classification Report", expanded=False):
                     report = classification_report(y_test, y_pred, target_names=[f"Class {c}" for c in class_names])
                     st.text(report)
 
                 if results.get('cv_scores') is not None:
-                    with st.expander("📈 Cross-Validation Scores", expanded=False):
+                    with st.expander(" Cross-Validation Scores", expanded=False):
                         cv_scores = results['cv_scores']
                         cv_df = pd.DataFrame({
                             'Fold': range(1, len(cv_scores) + 1),
@@ -390,8 +390,8 @@ def show_model_training_page():
                         st.write(f"**Mean CV Score:** {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
 
     st.markdown("---")
-    st.subheader("⚡ Quick Model Comparison")
-    if st.button("🏆 Compare All Models", help="Train all models quickly for comparison"):
+    st.subheader(" Quick Model Comparison")
+    if st.button(" Compare All Models", help="Train all models quickly for comparison"):
         all_results = model_trainer.quick_train_all_models(X_train, y_train, X_test, y_test)
 
         if all_results:
