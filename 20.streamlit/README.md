@@ -16,7 +16,10 @@ This project is a Streamlit web application that allows users to train and evalu
 
 The application uses the "Wine Quality" dataset, which contains chemical properties of different wines and a quality rating. The dataset is included in the data directory.
 
-# App is designed to train dataset named "Wine.csv" from folder named: "/data"
+
+- **project-root/** → Main application folder  
+- **data/** → Stores datasets  
+- **Wine.csv** → Training dataset file used by the app
 
 ## Usage
 
