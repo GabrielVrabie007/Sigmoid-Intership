@@ -1,0 +1,65 @@
+feature,mi_score
+low_cat__review_language_it,0.03641387364594961
+num__review_month,0.02777021249108813
+low_cat__app_category_Productivity,0.02660167329030161
+low_cat__app_category_Education,0.02258161893719013
+low_cat__review_language_en,0.020355679379640446
+low_cat__review_language_ru,0.018514859956328955
+low_cat__app_category_Communication,0.015284330343261487
+low_cat__review_language_ko,0.014426027921718543
+low_cat__device_type_Android,0.01343471203854918
+low_cat__review_language_hi,0.013197857368544508
+low_cat__review_language_vi,0.012783974548139287
+high_cat__review_text,0.012013362737127498
+num__num_helpful_votes,0.01111635099649444
+num__user_age,0.011030099056592135
+low_cat__device_type_iOS,0.010589441351233297
+low_cat__app_category_Music & Audio,0.009290507847052876
+low_cat__app_category_Business,0.008846035737516633
+low_cat__app_category_Photography,0.006157795816836398
+low_cat__user_gender_Unknown,0.005440496618382085
+low_cat__review_language_no,0.005399041267210247
+num__review_word_count,0.005293820690196682
+low_cat__app_category_News & Magazines,0.004832451429090945
+low_cat__app_category_Dating,0.004331481268997184
+num__review_dayofweek,0.002968073852420705
+low_cat__device_type_Windows Phone,0.0027608826367457873
+low_cat__device_type_iPad,0.0021437300438806872
+low_cat__review_language_th,0.0018850431031327552
+low_cat__review_language_sv,0.0004580725593972268
+low_cat__app_category_Video Players & Editors,8.638650029091366e-05
+low_cat__review_language_zh,0.0
+num__review_year,0.0
+low_cat__review_language_tl,0.0
+low_cat__review_language_tr,0.0
+high_cat__user_country,0.0
+low_cat__user_gender_Male,0.0
+low_cat__user_gender_Female,0.0
+high_cat__app_name,0.0
+low_cat__device_type_Android Tablet,0.0
+low_cat__user_gender_Prefer not to say,0.0
+low_cat__user_gender_Non-binary,0.0
+low_cat__review_language_pt,0.0
+num__review_length,0.0
+low_cat__app_category_Entertainment,0.0
+low_cat__review_language_pl,0.0
+low_cat__review_language_da,0.0
+low_cat__app_category_Games,0.0
+low_cat__app_category_Health & Fitness,0.0
+low_cat__app_category_Navigation,0.0
+low_cat__app_category_Shopping,0.0
+low_cat__app_category_Social Networking,0.0
+low_cat__app_category_Travel & Local,0.0
+low_cat__app_category_Utilities,0.0
+low_cat__review_language_ar,0.0
+low_cat__review_language_de,0.0
+low_cat__review_language_nl,0.0
+low_cat__review_language_es,0.0
+low_cat__review_language_fr,0.0
+num__app_major_version,0.0
+low_cat__review_language_id,0.0
+num__verified_purchase,0.0
+low_cat__review_language_ja,0.0
+low_cat__app_category_Finance,0.0
+low_cat__review_language_ms,0.0
+low_cat__review_language_fi,0.0
